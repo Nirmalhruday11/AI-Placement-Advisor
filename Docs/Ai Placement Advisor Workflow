@@ -1,0 +1,183 @@
+# AI Placement Advisor Workflow
+
+## Overview
+
+AI Placement Advisor is an intelligent placement recommendation system built on ServiceNow and integrated with Gemini AI.
+
+The system analyzes candidate skills, compares them with company requirements, identifies missing skills, and generates AI-powered career recommendations.
+
+---
+
+# End-to-End Workflow
+
+## Step 1: Candidate Registration
+
+A candidate creates a profile in the system.
+
+Example:
+
+Candidate Name: Rahul Sharma
+Branch: CSE
+CGPA: 8.2
+Email: [rahul@gmail.com](mailto:rahul@gmail.com)
+
+The profile is securely linked to the candidate's user account.
+
+---
+
+## Step 2: Skill Inventory Creation
+
+The candidate adds technical skills.
+
+Example:
+
+* Python
+* SQL
+
+These skills are stored in the Skill Inventory table.
+
+---
+
+## Step 3: Opportunity Creation
+
+Placement Officers create opportunities.
+
+Example:
+
+Company: Accenture
+
+Required Skills:
+
+* Python
+* SQL
+* Power BI
+
+The Opportunity Catalog acts as the central repository of placement drives.
+
+---
+
+## Step 4: Automated Skill Matching
+
+When the candidate updates skills, a Business Rule is triggered.
+
+The system:
+
+* Reads candidate skills
+* Reads company requirements
+* Compares skills
+* Calculates match score
+* Identifies missing skills
+
+---
+
+## Step 5: Career Match Result Generation
+
+The system automatically generates Career Match Results.
+
+Example:
+
+Company: Accenture
+
+Match Score: 67%
+
+Missing Skills:
+Power BI
+
+Recommendation:
+Recommended
+
+---
+
+## Step 6: Gemini AI Advice Generation
+
+The Career Match Result triggers Gemini AI.
+
+Input:
+
+Candidate:
+Rahul Sharma
+
+Company:
+Accenture
+
+Match Score:
+67%
+
+Missing Skills:
+Power BI
+
+Output:
+
+"Good match for Accenture. Improve Power BI to increase your placement chances."
+
+---
+
+## Step 7: Candidate Dashboard
+
+The dashboard provides:
+
+* Match Scores
+* Recommended Companies
+* Missing Skills
+* AI Recommendations
+* Placement Insights
+
+---
+
+# Security Workflow
+
+## Candidate
+
+Can Access:
+
+* Own Profile
+* Own Skills
+* Own Career Results
+* Opportunity Catalog
+
+Cannot Access:
+
+* Other Candidate Data
+* Administrative Records
+
+---
+
+## Placement Officer
+
+Can Access:
+
+* All Candidate Profiles
+* All Skills
+* All Career Results
+* Opportunity Catalog
+* Dashboards
+
+---
+
+# Workflow Diagram
+
+Candidate Profile
+↓
+Skill Inventory
+↓
+Opportunity Catalog
+↓
+Business Rule Matching Engine
+↓
+Career Match Results
+↓
+Gemini AI Advice
+↓
+Dashboard Analytics
+
+---
+
+# Future Enhancement
+
+Resume Upload
+↓
+Gemini AI Skill Extraction
+↓
+Automatic Skill Inventory Generation
+↓
+Career Recommendations
